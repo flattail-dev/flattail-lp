@@ -4,7 +4,7 @@
 
 ## 公開 URL
 
-- [https://keigo9.github.io/FlatTail/](https://keigo9.github.io/FlatTail/)
+- [https://flattail-dev.github.io/flattail-lp/](https://flattail-dev.github.io/flattail-lp/)
 
 ## 実装内容
 

@@ -23,7 +23,7 @@ const { z } = require("zod");
 
 const allowedOrigins = [
   // "http://localhost:5173", // ローカルでの開発時に使用
-  "https://keigo9.github.io", // テスト環境
+  "https://flattail-dev.github.io/flattail-lp/", // テスト環境
   "https://lp.flat-tail.co.jp", // 本番環境
 ];
 
