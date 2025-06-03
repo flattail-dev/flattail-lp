@@ -8,7 +8,7 @@
 
 `main`ブランチにプッシュすると、GitHub Actions を通じて自動的にビルドとデプロイが行われます。デプロイされたサイトは以下の URL で閲覧できます：
 
-https://keigo9.github.io/FlatTail/
+http://lp.flat-tail.co.jp/
 
 ## GitHub Actions の環境変数設定
 

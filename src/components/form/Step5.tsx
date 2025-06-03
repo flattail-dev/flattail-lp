@@ -125,7 +125,7 @@ const Step5 = ({ data, updateFields, setIsButtonDisabled }: StepProps) => {
             </div>
             <p className="text-[12px]">
               <a
-                href="/FlatTail/term-of-use"
+                href="/term-of-use"
                 className="underline text-token-main-700"
                 target="_blank"
               >
@@ -133,7 +133,7 @@ const Step5 = ({ data, updateFields, setIsButtonDisabled }: StepProps) => {
               </a>
               <span>、</span>
               <a
-                href="/FlatTail/privacy-policy"
+                href="/privacy-policy"
                 className="underline text-token-main-700"
                 target="_blank"
               >

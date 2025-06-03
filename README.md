@@ -4,7 +4,7 @@
 
 ## 公開 URL
 
-- [https://flattail-dev.github.io/flattail-lp/](https://flattail-dev.github.io/flattail-lp/)
+- [http://lp.flat-tail.co.jp/](http://lp.flat-tail.co.jp/)
 
 ## 実装内容
 
@@ -38,8 +38,8 @@
 
 ```bash
 # リポジトリのクローン
-git clone https://github.com/keigo9/FlatTail.git
-cd FlatTail
+git clone https://github.com/flattail-dev/flattail-lp.git
+cd flattail-lp
 
 # 依存関係のインストール
 npm install
