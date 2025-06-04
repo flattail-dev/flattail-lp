@@ -148,6 +148,10 @@ exports.submitToKintone = onRequest(
       // バリデーション
       const parseResult = formDataSchema.safeParse(request.body);
       if (!parseResult.success) {
+        logger.error("Validation failed", {
+          errors: parseResult.error.errors,
+          body: request.body,
+        });
         // parseResult.error で詳細なエラーが取れる
         response.status(400).json({
           success: false,
