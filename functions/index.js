@@ -50,7 +50,7 @@ const formDataSchema = z.object({
     "over_20",
     "unknown",
   ]),
-  people: z.number().optional(),
+  people: z.number().nullable(),
   // step5
   name: z.string(),
   phone: z.string(),
