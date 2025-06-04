@@ -72,3 +72,8 @@ gcloud run services update submittokintone \
 ```bash
 gcloud run services describe submittokintone --region us-central1 --format="get(spec.template.spec.containers[0].env)" | grep -E "KINTONE_API_KEY|KINTONE_DOMAIN|KINTONE_APP_ID"
 ```
+
+ログの確認
+
+- Claude Run のログタブから確認できます
+- https://console.cloud.google.com/run/detail/asia-northeast1/submittokintone/logs?hl=ja&inv=1&invt=AbzLgA&project=kintone-api-form
