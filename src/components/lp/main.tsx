@@ -47,7 +47,7 @@ export default function Main({
                   title: "愛知県名古屋市で",
                   value: "20,000",
                   desc: "月間",
-                  sub: "削減のご提案",
+                  sub: "削減！",
                 },
                 {
                   title: "愛知県豊田市で",
@@ -59,7 +59,7 @@ export default function Main({
                   title: "愛知県安城市で",
                   value: "16,000",
                   desc: "月間",
-                  sub: "削減のご提案",
+                  sub: "削減！",
                 },
                 {
                   title: "愛知県一宮市で",
