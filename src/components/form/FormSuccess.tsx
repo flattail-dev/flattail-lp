@@ -1,6 +1,23 @@
+import { useEffect } from "react";
 import { Button } from "../ui/button";
 
+// TypeScriptにdataLayerの存在を教える
+declare global {
+  interface Window {
+    dataLayer: Record<string, any>[];
+  }
+}
+
 const FormSuccess = () => {
+  useEffect(() => {
+    // GTM用イベント送信
+    if (window.dataLayer) {
+      window.dataLayer.push({
+        event: "form_success", // ← GTMのトリガー名と一致させる
+      });
+    }
+  }, []);
+
   return (
     <div
       className={`min-h-[calc(100dvh-var(--header-height-mobile)-5rem)] sm:min-h-[calc(100dvh-var(--header-height-pc)-10rem)]`}
