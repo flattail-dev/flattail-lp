@@ -13,7 +13,7 @@ const FormSuccess = () => {
     // GTM用イベント送信
     if (window.dataLayer) {
       window.dataLayer.push({
-        event: "form_success", // ← GTMのトリガー名と一致させる
+        event: "form_success", // ← GTMのトリガー名と一致させていく
       });
     }
   }, []);
