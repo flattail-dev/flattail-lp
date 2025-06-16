@@ -10,11 +10,14 @@ declare global {
 
 const FormSuccess = () => {
   useEffect(() => {
-    // GTM用イベント送信
-    if (window.dataLayer) {
-      window.dataLayer.push({
-        event: "form_success", // ← GTMのトリガー名と一致させる
-      });
+    if (!window.dataLayer) return;
+  
+    // 発火済みチェック
+    const alreadyPushed = window.dataLayer.some(
+      (e) => e.event === "form_success"
+    );
+    if (!alreadyPushed) {
+      window.dataLayer.push({ event: "form_success" });
     }
   }, []);
 
