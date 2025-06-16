@@ -82,7 +82,7 @@ const kintoneSelectValue = {
     rental: "賃貸",
   },
   buildingOld: {
-    less_than_5: "～5年",
+    less_than_5: "〜5年",
     between_5_and_10: "5〜10年",
     between_10_and_15: "10〜15年",
     between_15_and_20: "15〜20年",

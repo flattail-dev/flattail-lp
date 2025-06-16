@@ -2,6 +2,8 @@
 
 電気料金の診断フォームを提供する React SPA ランディングページです。
 
+最新のコードは先方管理です: [https://github.com/flattail-dev/flattail-lp](https://github.com/flattail-dev/flattail-lp)
+
 ## 公開 URL
 
 - [http://lp.flat-tail.co.jp/](http://lp.flat-tail.co.jp/)
