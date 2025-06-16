@@ -342,7 +342,13 @@ export default function Main({
         </div>
       </section>
       <DiagnosisButton />
-      <FixedButton onClick={() => setStartDiagnosis(true)} showGlassIcon>
+      <FixedButton
+        onClick={() => {
+          window.dataLayer?.push({ event: "start_diagnosis_clicked" });
+          setStartDiagnosis(true);
+        }}
+        showGlassIcon
+      >
         診断スタート
       </FixedButton>
     </div>
