@@ -20,6 +20,9 @@ const INITIAL_DATA: FormData = {
   name: "",
   email: "",
   phone: "",
+  utm_source: "",
+  utm_medium: "",
+  utm_campaign: "",
 };
 
 const FormContainer = ({
@@ -59,7 +62,16 @@ const FormContainer = ({
     setError(null);
 
     try {
-      const result = await submitToKintone(data);
+      const urlParams = new URLSearchParams(window.location.search);
+
+      const extendedData = {
+        ...data,
+        utm_source: urlParams.get("utm_source") || "",
+        utm_medium: urlParams.get("utm_medium") || "",
+        utm_campaign: urlParams.get("utm_campaign") || "",
+      };
+
+      const result = await submitToKintone(extendedData);
       if (result.success) {
         setIsComplete(true);
       } else {

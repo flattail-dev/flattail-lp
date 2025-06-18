@@ -55,6 +55,9 @@ const formDataSchema = z.object({
   name: z.string(),
   phone: z.string(),
   email: z.string(),
+  utm_source: z.string().nullable().optional(),
+  utm_medium: z.string().nullable().optional(),
+  utm_campaign: z.string().nullable().optional(),
 });
 
 // Kintoneのselectのvalueにenumのvalueを設定する
@@ -185,6 +188,9 @@ exports.submitToKintone = onRequest(
         お客様名: { value: formData.name },
         電話番号: { value: formData.phone },
         メールアドレス: { value: formData.email },
+        utm_source: { value: formData.utm_source || "" },
+        utm_medium: { value: formData.utm_medium || "" },
+        utm_campaign: { value: formData.utm_campaign || "" },
       };
 
       logger.info("Sending to Kintone", {
