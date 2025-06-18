@@ -17,6 +17,11 @@ export interface FormData {
   name: string;
   phone: string;
   email: string;
+
+  // utm param
+  utm_source: string;
+  utm_medium: string;
+  utm_campaign: string;
 }
 
 export type FormStep = 1 | 2 | 3 | 4 | 5;
