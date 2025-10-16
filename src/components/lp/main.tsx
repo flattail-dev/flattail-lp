@@ -13,12 +13,12 @@ export default function Main({
     <div className="pb-[80px]">
       <section className="w-full aspect-[393/281] sm:aspect-[1280/315]">
         <img
-          src={`${import.meta.env.BASE_URL}LP/FV_PC.png`}
+          src={`${import.meta.env.BASE_URL}LP/FV_PC_2.png`}
           alt="LP"
           className="w-full h-full object-cover hidden sm:block"
         />
         <img
-          src={`${import.meta.env.BASE_URL}LP/FV_SP.png`}
+          src={`${import.meta.env.BASE_URL}LP/FV_SP_2.png`}
           alt="LP"
           className="w-full h-full object-cover sm:hidden"
         />
