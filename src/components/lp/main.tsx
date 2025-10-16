@@ -299,14 +299,10 @@ export default function Main({
               </span>
               <span className="relative inline-block">
                 <span className="block text-[32px] flex flex-col items-center bg-lp-diagnosis-title-gradation bg-clip-text text-transparent z-10 relative leading-[32px]">
-                  補助金活用診断を
-                  <br />
-                  受けると
+                  一括見積比較に申し込むと
                 </span>
                 <span className="absolute text-[32px] top-0 left-0 text-stroke-gradation-white-6 z-0 leading-[32px]">
-                  補助金活用診断を
-                  <br />
-                  受けると
+                  一括見積比較に申し込むと
                 </span>
               </span>
             </h2>
