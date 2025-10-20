@@ -22,6 +22,16 @@ export default function Main({
           alt="LP"
           className="w-full h-full object-cover sm:hidden"
         />
+        <img
+          src={`${import.meta.env.BASE_URL}LP/FV2_PC_2.png`}
+          alt="LP"
+          className="w-full h-full object-cover hidden sm:block"
+        />
+        <img
+          src={`${import.meta.env.BASE_URL}LP/FV2_SP_2.png`}
+          alt="LP"
+          className="w-full h-full object-cover sm:hidden"
+        />        
       </section>
       <section className="w-full pt-6 pb-8 bg-lp-slider-gradation">
         <div className="flex justify-center items-center">
