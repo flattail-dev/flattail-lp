@@ -21,8 +21,27 @@ export default function Main({
           src={`${import.meta.env.BASE_URL}LP/FV_SP_2.png`}
           alt="LP"
           className="w-full h-full object-cover sm:hidden"
-        />    
+        />
       </section>
+      {/* 画像ブロック（SP/PC 切替・全体表示） */}
+      <div className="relative w-full h-full">
+        <picture className="block w-full h-full">
+          {/* 640px 以上（= sm 以上）は PC 画像 */}
+          <source
+          media="(min-width: 640px)"
+          srcSet={`${import.meta.env.BASE_URL}LP/FV2_PC_2.png`}
+        />
+        {/* それ未満は SP 画像。object-contain で画像全体が見えるようにする */}
+        <img
+          src={`${import.meta.env.BASE_URL}LP/FV2_SP_2.png`}
+          alt="なぜ、フラットTAILだと100万円以上安く始められるのか！？"
+          loading="lazy"
+          decoding="async"
+          className="absolute inset-0 w-full h-full object-contain"
+        />
+        </picture>
+      </div>
+
       <section className="w-full pt-6 pb-8 bg-lp-slider-gradation">
         <div className="flex justify-center items-center">
           <span className="bg-token-mono-100 w-[16px] h-[3px] rounded-sm mr-2 rotate-[45deg] mb-2" />
