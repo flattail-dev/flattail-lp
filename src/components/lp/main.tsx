@@ -23,24 +23,50 @@ export default function Main({
           className="w-full h-full object-cover sm:hidden"
         />
       </section>
-      {/* 画像ブロック（SP/PC 切替・全体表示） */}
-      <div className="relative w-full h-full">
-        <picture className="block w-full h-full">
-          {/* 640px 以上（= sm 以上）は PC 画像 */}
-          <source
-          media="(min-width: 640px)"
-          srcSet={`${import.meta.env.BASE_URL}LP/FV2_PC_2.png`}
-        />
-        {/* それ未満は SP 画像。object-contain で画像全体が見えるようにする */}
-        <img
-          src={`${import.meta.env.BASE_URL}LP/FV2_SP_2.png`}
-          alt="なぜ、フラットTAILだと100万円以上安く始められるのか！？"
-          loading="lazy"
-          decoding="async"
-          className="absolute inset-0 w-full h-full object-contain"
-        />
-        </picture>
-      </div>
+      {/* 置き換え先：FVの直下に入れるブロック */}
+<section className="w-full">
+  {/* SP版（~sm） */}
+  <div className="block sm:hidden relative aspect-[768/1372] overflow-hidden">
+    <img
+      src={`${import.meta.env.BASE_URL}LP/FV2_SP_2.png`}
+      alt="フラットTAILの仕組み（SP）"
+      className="absolute inset-0 w-full h-full object-contain bg-[#fff7ec]"
+      loading="lazy"
+      decoding="async"
+    />
+  </div>
+
+  {/* PC版（sm~） */}
+  <div className="hidden sm:block relative aspect-[1325/768] overflow-hidden">
+    <img
+      src={`${import.meta.env.BASE_URL}LP/FV2_PC_2.png`}
+      alt="フラットTAILの仕組み（PC）"
+      className="absolute inset-0 w-full h-full object-contain bg-[#fff7ec]"
+      loading="lazy"
+      decoding="async"
+    />
+  </div>
+</section>
+
+      <section className="w-full aspect-[393/281] sm:aspect-[1280/315] relative overflow-hidden">
+  {/* PC版 */}
+  <img
+    src={`${import.meta.env.BASE_URL}LP/FV2_PC_2.png`}
+    alt="フラットTAILの仕組み_PC"
+    className="hidden sm:block absolute inset-0 w-full h-full object-contain bg-[#fff7ec]"
+    loading="lazy"
+    decoding="async"
+  />
+
+  {/* SP版 */}
+  <img
+    src={`${import.meta.env.BASE_URL}LP/FV2_SP_2.png`}
+    alt="フラットTAILの仕組み_SP"
+    className="block sm:hidden absolute inset-0 w-full h-full object-contain bg-[#fff7ec]"
+    loading="lazy"
+    decoding="async"
+  />
+</section>
 
       <section className="w-full pt-6 pb-8 bg-lp-slider-gradation">
         <div className="flex justify-center items-center">
