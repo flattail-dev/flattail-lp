@@ -12,32 +12,16 @@ export default function Main({
   return (
     <div className="pb-[80px]">
       <section className="w-full aspect-[393/281] sm:aspect-[1280/315]">
-        <button
-          type="button"
-          onClick={handleStartFromHero}
-          className="relative block w-full h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-token-main-400 cursor-pointer"
-          aria-label="無料診断を開始する"
-          title="無料診断を開始する"
-        >
-          {/* PC 画像 */}
-          <img
-            src={`${import.meta.env.BASE_URL}LP/FV_PC_2.png`}
-            alt="LP"
-            className="w-full h-full object-cover hidden sm:block"
-            loading="eager"
-            decoding="async"
-          />
-          {/* SP 画像 */}
-          <img
-            src={`${import.meta.env.BASE_URL}LP/FV_SP_2.png`}
-            alt="LP"
-            className="w-full h-full object-cover sm:hidden"
-            loading="eager"
-            decoding="async"
-          />
-          {/* スクリーンリーダー用の文言（視覚的には非表示） */}
-          <span className="sr-only">診断スタート</span>
-        </button>
+        <img
+          src={`${import.meta.env.BASE_URL}LP/FV_PC_2.png`}
+          alt="LP"
+          className="w-full h-full object-cover hidden sm:block"
+        />
+        <img
+          src={`${import.meta.env.BASE_URL}LP/FV_SP_2.png`}
+          alt="LP"
+          className="w-full h-full object-cover sm:hidden"
+        />
       </section>
       
 {/* 画像は自然な縦横比のまま全体表示。PC/SPは<source>で出し分け */}
