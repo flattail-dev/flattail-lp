@@ -23,42 +23,27 @@ export default function Main({
           className="w-full h-full object-cover sm:hidden"
         />
       </section>
-      {/* 置き換え先：FVの直下に入れるブロック */}
-      <section className="w-full aspect-[393/281] sm:aspect-[1280/315] relative overflow-hidden">
-  {/* PC用：FV_PC_2.png → FV2_PC_2.png に差し替え、全体表示 */}
-  <img
-    src={`${import.meta.env.BASE_URL}LP/FV2_PC_2.png`}
-    alt="LP"
-    className="hidden sm:block absolute inset-0 m-auto max-w-full max-h-full object-contain"
-  />
-  {/* SP用：FV_SP_2.png → FV2_SP_2.png に差し替え、全体表示 */}
-  <img
-    src={`${import.meta.env.BASE_URL}LP/FV2_SP_2.png`}
-    alt="LP"
-    className="block sm:hidden absolute inset-0 m-auto max-w-full max-h-full object-contain"
-  />
+      
+{/* 画像は自然な縦横比のまま全体表示。PC/SPは<source>で出し分け */}
+<section className="w-full bg-[#fff7ec]">
+  <picture>
+    {/* 640px 以上は PC 画像 */}
+    <source
+      media="(min-width: 640px)"
+      srcSet={`${import.meta.env.BASE_URL}LP/FV2_PC_2.png`}
+      sizes="100vw"
+    />
+    {/* 640px 未満は SP 画像。高さは画像に合わせて h-auto */}
+    <img
+      src={`${import.meta.env.BASE_URL}LP/FV2_SP_2.png`}
+      alt="なぜ、フラットTAILだと100万円以上安く始められるのか？"
+      className="block w-full h-auto mx-auto"
+      loading="lazy"
+      decoding="async"
+    />
+  </picture>
 </section>
 
-
-      <section className="w-full aspect-[393/281] sm:aspect-[1280/315] relative overflow-hidden">
-  {/* PC版 */}
-  <img
-    src={`${import.meta.env.BASE_URL}LP/FV2_PC_2.png`}
-    alt="フラットTAILの仕組み_PC"
-    className="hidden sm:block absolute inset-0 w-full h-full object-contain bg-[#fff7ec]"
-    loading="lazy"
-    decoding="async"
-  />
-
-  {/* SP版 */}
-  <img
-    src={`${import.meta.env.BASE_URL}LP/FV2_SP_2.png`}
-    alt="フラットTAILの仕組み_SP"
-    className="block sm:hidden absolute inset-0 w-full h-full object-contain bg-[#fff7ec]"
-    loading="lazy"
-    decoding="async"
-  />
-</section>
 
       <section className="w-full pt-6 pb-8 bg-lp-slider-gradation">
         <div className="flex justify-center items-center">
