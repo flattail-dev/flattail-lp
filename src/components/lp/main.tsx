@@ -24,29 +24,21 @@ export default function Main({
         />
       </section>
       {/* 置き換え先：FVの直下に入れるブロック */}
-<section className="w-full">
-  {/* SP版（~sm） */}
-  <div className="block sm:hidden relative aspect-[768/1372] overflow-hidden">
-    <img
-      src={`${import.meta.env.BASE_URL}LP/FV2_SP_2.png`}
-      alt="フラットTAILの仕組み（SP）"
-      className="absolute inset-0 w-full h-full object-contain bg-[#fff7ec]"
-      loading="lazy"
-      decoding="async"
-    />
-  </div>
-
-  {/* PC版（sm~） */}
-  <div className="hidden sm:block relative aspect-[1325/768] overflow-hidden">
-    <img
-      src={`${import.meta.env.BASE_URL}LP/FV2_PC_2.png`}
-      alt="フラットTAILの仕組み（PC）"
-      className="absolute inset-0 w-full h-full object-contain bg-[#fff7ec]"
-      loading="lazy"
-      decoding="async"
-    />
-  </div>
+      <section className="w-full aspect-[393/281] sm:aspect-[1280/315] relative overflow-hidden">
+  {/* PC用：FV_PC_2.png → FV2_PC_2.png に差し替え、全体表示 */}
+  <img
+    src={`${import.meta.env.BASE_URL}LP/FV2_PC_2.png`}
+    alt="LP"
+    className="hidden sm:block absolute inset-0 m-auto max-w-full max-h-full object-contain"
+  />
+  {/* SP用：FV_SP_2.png → FV2_SP_2.png に差し替え、全体表示 */}
+  <img
+    src={`${import.meta.env.BASE_URL}LP/FV2_SP_2.png`}
+    alt="LP"
+    className="block sm:hidden absolute inset-0 m-auto max-w-full max-h-full object-contain"
+  />
 </section>
+
 
       <section className="w-full aspect-[393/281] sm:aspect-[1280/315] relative overflow-hidden">
   {/* PC版 */}
