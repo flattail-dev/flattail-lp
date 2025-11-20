@@ -11,18 +11,25 @@ export default function Main({
 }) {
   return (
     <div className="pb-[80px]">
-      <section className="w-full aspect-[393/281] sm:aspect-[1280/315]">
-        <img
-          src={`${import.meta.env.BASE_URL}LP/FV_PC_2.png`}
-          alt="LP"
-          className="w-full h-full object-cover hidden sm:block"
-        />
-        <img
-          src={`${import.meta.env.BASE_URL}LP/FV_SP_2.png`}
-          alt="LP"
-          className="w-full h-full object-cover sm:hidden"
-        />
-      </section>
+{/* 画像は自然な縦横比のまま全体表示。PC/SPは<source>で出し分け */}
+<section className="w-full bg-[#fff7ec]">
+  <picture>
+    {/* 640px 以上は PC 画像 */}
+    <source
+      media="(min-width: 640px)"
+      srcSet={`${import.meta.env.BASE_URL}LP/FV_PC_3.png`}
+      sizes="100vw"
+    />
+    {/* 640px 未満は SP 画像。高さは画像に合わせて h-auto */}
+    <img
+      src={`${import.meta.env.BASE_URL}LP/FV_SP_3.png`}
+      alt="なぜ、フラットTAILだと100万円以上安く始められるのか？"
+      className="block w-full h-auto mx-auto"
+      loading="lazy"
+      decoding="async"
+    />
+  </picture>
+</section>
       
 {/* 画像は自然な縦横比のまま全体表示。PC/SPは<source>で出し分け */}
 <section className="w-full bg-[#fff7ec]">
@@ -30,12 +37,12 @@ export default function Main({
     {/* 640px 以上は PC 画像 */}
     <source
       media="(min-width: 640px)"
-      srcSet={`${import.meta.env.BASE_URL}LP/FV2_PC_2.png`}
+      srcSet={`${import.meta.env.BASE_URL}LP/FV2_PC_3.png`}
       sizes="100vw"
     />
     {/* 640px 未満は SP 画像。高さは画像に合わせて h-auto */}
     <img
-      src={`${import.meta.env.BASE_URL}LP/FV2_SP_2.png`}
+      src={`${import.meta.env.BASE_URL}LP/FV2_SP_3.png`}
       alt="なぜ、フラットTAILだと100万円以上安く始められるのか？"
       className="block w-full h-auto mx-auto"
       loading="lazy"
