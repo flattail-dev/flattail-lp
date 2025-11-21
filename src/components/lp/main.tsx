@@ -374,7 +374,7 @@ export default function Main({
         }}
         showGlassIcon
       >
-        診断スタート
+        今すぐ無料で見積もりしてみる!
       </FixedButton>
     </div>
   );
